@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ===== GLOBAL THEME ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(
+    125deg,
+    #ff9e83 0%,
+    #f47f98 48%,
+    #ffc17f 100%
+  );
+  color: #493936;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.main-content {
+  width: min(1080px, 92%);
+  margin: auto;
+  padding: 35px 0 55px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  min-height: 78px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #f6e5e1;
+  box-shadow: 0 5px 20px rgba(100, 45, 45, 0.06);
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #df727b;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #fff0e9;
+  color: #e77b79;
+}
+
+.nav-tagline {
+  color: #927d78;
+  font-size: 14px;
+}
+
+.nav-label {
+  color: #df7778;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero-section {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  padding: 65px 30px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(120, 55, 55, 0.10);
+  margin: 10px 0 45px;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 9px 17px;
+  background: #fff0e9;
+  border-radius: 30px;
+  color: #df7974;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.2;
+  margin: 24px 0 17px;
+  color: #493936;
+}
+
+.hero-section h1 span {
+  background: linear-gradient(90deg, #ed8175, #e77d9f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-section p {
+  max-width: 620px;
+  margin: auto;
+  color: #96817c;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.hero-decoration {
+  margin-top: 25px;
+  color: #e98280;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ===== WORKSPACE ===== */
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 0 0 22px;
+}
+
+.dashboard-heading h2 {
+  color: white;
+  font-size: 26px;
+  margin: 0 0 6px;
+}
+
+.dashboard-heading p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 14px;
+}
+
+.notes-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 19px;
+  border-radius: 30px;
+  background: white;
+  color: #df7778;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== NOTE FORM ===== */
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(120, 55, 55, 0.10);
+  margin-bottom: 45px;
+}
+
+.form-container h2 {
+  color: #493936;
+  font-size: 23px;
+  margin: 0 0 22px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 15px 17px;
+  border: 1px solid #f1dfda;
+  border-radius: 13px;
+  outline: none;
+  background: #fffaf8;
+  color: #493936;
+  font-family: inherit;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #ed9188;
+  box-shadow: 0 0 0 4px rgba(237, 145, 136, 0.13);
+  background: white;
+}
+
+.form-container textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-container button {
+  align-self: flex-start;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 23px;
+  background: linear-gradient(120deg, #f18c79, #ed7896);
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.form-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(230, 115, 130, 0.25);
+}
+
+/* ===== NOTES LIST ===== */
+
+.notes-container h2 {
+  color: white;
+  font-size: 25px;
+  margin: 0 0 22px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* ===== NOTE CARDS ===== */
+
+.note-card {
+  background: white;
+  border: none;
+  border-left: 5px solid #f18c79;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 28px rgba(120, 55, 55, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+  min-width: 0;
+}
+
+.note-card:nth-child(3n + 2) {
+  border-left-color: #ee9bb0;
+}
+
+.note-card:nth-child(3n) {
+  border-left-color: #f4b36f;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(120, 55, 55, 0.14);
+}
+
+.note-card h3 {
+  color: #493936;
+  font-size: 19px;
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+}
+
+.note-card p {
+  color: #897974;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  margin: 0 0 18px;
+}
+
+.note-card small {
+  color: #ad9992;
+  font-size: 12px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #fff0e9;
+  color: #df7974;
+}
+
+.delete-btn {
+  background: #fff0f1;
+  color: #d96978;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+
+.app-footer {
+  text-align: center;
+  padding: 45px 10px 10px;
+  color: white;
+}
+
+.app-footer p {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.app-footer span {
+  font-size: 13px;
+}
+
+/* ===== EMPTY STATE ===== */
+
+.notes-container > p {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 18px;
+  color: #927d78;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .nav-tagline {
+    display: none;
+  }
+
+  .nav-label {
+    font-size: 9px;
+  }
+
+  .main-content {
+    width: 92%;
+  }
+
+  .hero-section {
+    padding: 45px 18px;
+    border-radius: 22px;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand {
+    font-size: 21px;
+  }
+
+  .nav-label {
+    display: none;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 21px;
+  }
+}
