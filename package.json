@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "notes-management-app",
+=======
+  "name": "product",
+>>>>>>> 3d13e97a2fa2fa32511f3a2ef2574a1851efb5c4
   "private": true,
   "version": "0.0.0",
   "type": "module",
